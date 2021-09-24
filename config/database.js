@@ -9,7 +9,7 @@ module.exports = ({ env }) => ({
         port: env.int('DATABASE_PORT', 27017),
         database: env('DATABASE_NAME', 'my-ecommerce-next'),
         username: env('DATABASE_USERNAME', 'admin'),
-        password: env('DATABASE_PASSWORD', 'Juanes1518'),
+        password: env('DATABASE_PASSWORD', 'gaara021'),
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
