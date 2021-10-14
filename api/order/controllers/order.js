@@ -18,7 +18,7 @@ module.exports = {
 
         const charge = await stripe.charges.create({
             amount: totalPayment * 100,
-            currency: "eur",
+            currency: "usd",
             source: token.id,
             description: `ID Usuario: ${idUser}`,
         });
@@ -32,7 +32,9 @@ module.exports = {
                 idPayment: charge.id,
                 addressShipping,
             };
-            const validData = await strapi.entityValidator.validateEntity(
+            //se corrigio el validateEntity, para esta version ya no existe
+            // y se debe poner validateEntityCreation, asi se corrije el error 500
+            const validData = await strapi.entityValidator.validateEntityCreation(
                 strapi.models.order,
                 data
             );
