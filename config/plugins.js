@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
         secretAccessKey: env('AWS_ACCESS_SECRET'),
         region: 'us-east-2',
         params: {
-          Bucket: 'ecommerce-lacroix021',
+          Bucket: 'ecommerce-lacroix021', //nombre del bucket de amazon
         },
       },
     },
